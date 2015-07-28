@@ -2,7 +2,7 @@
 <html>
 <head><title>Psychology Test by #Bacon</title>
 	<link rel='stylesheet' href='style.css'/>
-	<script src='script.js'></script>
+	
 </head>
 <body>
 <div id = "headerbox">
@@ -18,11 +18,18 @@ This website asks you questions in different categories to see which parts of yo
 </div>
 <img id = "tebp"src="http://i.ytimg.com/vi/qLvpuuMQxSQ/hqdefault.jpg"></img>
 <img id = "ho"src="https://lh3.googleusercontent.com/-V33pOi3VHQ4/AAAAAAAAAAI/AAAAAAAAAHk/QraNV5sjzVc/s120-c/photo.jpg"></img>
-<button onclick = "newButton">Take the Test!</button>
+<button id = "demo" onclick="myFunction()">Take the Test!</button>
+
 <script>
-function myButton(){
-var person = prompt("Would you keep a wallet that you found on the street?")
-</body>
+function myFunction() {
+    var person = prompt("If you ask your friends what they think of you, is it similar to the answer you gave to yourself?", "Yes or No?");
+	var person2 = prompt("Are you aware of the consequences if you break rules?", "Yes or No?");
+	var person3 = prompt("Are you aware that what you do has an effect on others?", "Yes or No?");
+	var person4 = prompt("Would you", "Yes or No?");
+	var person5 = prompt("Would you", "Yes or No?");
+}
+    </script>
+<script src='script.js'></script>
 </html>
 
 <!-- Most of this program was written by TheEpicBlueberryPuffin-->
