@@ -40,7 +40,7 @@
 }#tebp{
     height:100px;
     float:left;
-    margin-top:4px;
+    margin-top:-50px;
 	clear:both;
 	margin-right:0px;
 }button{
@@ -56,7 +56,7 @@
 	margin-left:-400px;
 	}#ho{
 	height:100px;
-	margin-top:510px;
+	margin-top:400px;
 	clear:both;
 	margin-left:-100px;
 	margin-right:500px;
