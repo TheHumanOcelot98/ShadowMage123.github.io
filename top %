@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+You are in the top <span id="topPercentSpan"></span>%
+
+<script>
+    var currentScores = [
+        {left: 50, right: 78 },
+        {left: 100, right: 2 },
+        {left: 19, right: 83 },
+        {left: 35, right: 6 },
+        {left: 18, right: 12 },
+        {left: 90, right: 50 },
+        {left: 78, right: 12 },
+        {left: 12, right: 9 }
+    ];
+var total_people = currentScores.length;
+var myScore = {left: 87, right: 100};
+console.log(total_people);
+    var count;
+    var numberOfPeopleWithLess = 0;
+    for (count = 0; count < total_people; count++) {
+        if (myScore.left > currentScores[count].left ) {
+            numberOfPeopleWithLess = numberOfPeopleWithLess +1
+        }
+    }
+    var percentageOfPeopleWithLess = 100 * numberOfPeopleWithLess / total_people;
+    console.log(percentageOfPeopleWithLess);
+    var topPercentScore = 100 - percentageOfPeopleWithLess;
+    document.getElementById("topPercentSpan").innerHTML = topPercentScore;
+</script>
+
+
+</body>
+</html>
