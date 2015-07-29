@@ -37,12 +37,6 @@
     font-family:Arial;
     color:navy;
     font-weight:bold;
-}#tebp{
-    height:90px;
-    float:left;
-    margin-top:-110px;
-	clear:both;
-	margin-right:0px;
 }button{
     color:navy;
     font-weight:bold;
@@ -54,12 +48,6 @@
     border:solid 5px navy;
     margin-top:-300px;
 	margin-left:-400px;
-	}#ho{
-	height:90px;
-	margin-top:390px;
-	clear:both;
-	margin-left:-100px;
-	margin-right:500px;
 	}
 	#mystyle{
 		text-align:center;
