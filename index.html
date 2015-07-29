@@ -19,7 +19,7 @@ This website asks you questions in different categories to see which parts of yo
 <img id = "tebp"src="http://i.ytimg.com/vi/qLvpuuMQxSQ/hqdefault.jpg"></img>
 <img id = "ho"src="https://lh3.googleusercontent.com/-V33pOi3VHQ4/AAAAAAAAAAI/AAAAAAAAAHk/QraNV5sjzVc/s120-c/photo.jpg"></img>
 <button id = "demo" onclick="myFunction()">Take the Test!</button>
-
+<!--
 <script>
 function myFunction() {
     var person = prompt("If you ask your friends what they think of you, is it similar to the answer you gave to yourself?", "Yes or No?");
@@ -29,6 +29,35 @@ function myFunction() {
 	var person5 = prompt("Would you", "Yes or No?");
 }
     </script>
+    -->
+<style>
+.hideMe {
+    display:none
+}
+.showMe {
+display:auto
+}
+</style>
+</head>
+<body>
+<div id ="mystyle">
+<p>Do you like bacon?</p>
+<input type="radio" name="blah" value="y" checked>Yes
+<br>
+<input type="radio" name="blah" value="n">No
+</form> 
+</div>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+
+document.getElementById("mystyle").className = "hideMe";
+
+function myFunction() {
+    document.getElementById("mystyle").className = "showMe";
+}
+</script>
+
 
 </html>
 
