@@ -41,9 +41,9 @@ display:auto
 <body>
 <div id ="mystyle">
 <p>When learning a language, do you repeat after someone talking or try to remember it yourself?</p>
-<input type="radio" name="blah" value="left" checked>Yes
+<input type="radio" id="check" name="blah" value="left" checked>I repeat after speech
 <br>
-<input type="radio" name="blah" value="nothing">No
+<input type="radio" id="check1" name="blah" value="nothing">I try to remember it
 <button onclick="submitFunction()">Submit</button>
 </form> 
 </div>
@@ -58,8 +58,15 @@ function myFunction() {
     document.getElementById("mystyle").className = "showMe";
     
 }
+var question_value;
 function submitFunction() {
-	if 
+     if	(document.getElementById('check').checked) {
+     "left"=="left"+1;
+     console.log("yay coding", left);
+
+	
+		
+	}
 	
 }
 </script>
