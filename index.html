@@ -6,7 +6,7 @@
 </head>
 <body>
 <div id = "headerbox">
-<h1 id = "header">Train Your Brain! testingrosie</h1>
+<h1 id = "header">Train Your Brain!</h1>
 <h3 id = "subtitle">A helpful, friendly and easy way to find your mental strengths and weaknesses!</h3>        
 </div>
 <div id = "describebox">
@@ -15,7 +15,7 @@ Welcome to our Mind blowing test!!
 You may have done a test like this before, if so, you'll know exactly what to do. If not, don't worry, just answer the questions and check the result at the end. Click the purple button to get started! Follow us on twitter at @HashtagBacon42!
 </p>
 <p class = "description">Thanks, Team #Bacon :).</p>
-<img id = twittterbacon src="https://pbs.twimg.com/profile_images/625979812000235521/86KTDBiV_bigger.png"></img>
+<img id = "twittterbacon" src="https://pbs.twimg.com/profile_images/625979812000235521/86KTDBiV_bigger.png"/>
 </div>
 <!--
 <script>
@@ -36,24 +36,29 @@ function myFunction() {
 display:auto
 }
 </style>
-</head>
-<body>
-<script>
-document.getElementById('mystyle').className = "hideMe"
-</script>
-<div id ="mystyle">
+
+<div id ="mystyle" class="hideMe">
+
 
 <p>When learning a language, do you repeat after someone talking or try to remember it yourself?</p>
 <input type="radio" id="check" name="blah" value="left" checked>I repeat after speech
 <br>
-<input type="radio" id="check1" name="blah" value="nothing">I try to remember it
-<button onclick="submitFunction()">Submit</button>
-</form> 
+<input type="radio" id="check1" name="blah" value="nothing">I try to remember it<br/>
+    <button onclick="submitFunction()">Submit</button>
 </div>
+
+    <div id="question2" class="hideMe">
+        <p>When looking at an app you want to buy do you look at the reviews?</p>
+        <input type="radio" id ="check2" name="blah1" value="left" checked>Yes<br>
+        <input type="radio" id="check3" name="blah1" value="nothing">No<br/>
+        <button onclick="submit2Function()">Submit</button>
+
+    </div>
+</form> 
+
 <button onclick="myFunction()">Take the Test!</button>
 <div id ="credits">Made By TheHumanOcelot, TheEpicBlueberryPuffin, Bronze Boys and ShadowMage</div>
 <script>
-
 var left=0;
 var right=0;
 document.getElementById("mystyle").className = "hideMe";
@@ -61,58 +66,58 @@ document.getElementById("mystyle").className = "hideMe";
 function myFunction() {
     document.getElementById("mystyle").className = "showMe";
     
-}<div id="question2">
-<p>When looking at an app you want to buy do you look at the reviews?</p>
-<input type="radio" id ="check2" name="blah1" value="left">Yes<br>
-<input type="radio" id="check3" name="blah1" value="nothing">No
-<button onclick="submit2Function()">Submit</button>
-</div>
+}
+
 var question_value;
 function submitFunction() {
-     if	(document.getElementById('check').checked) {
-     left = left + 1;
-document.getElementById('mystyle').className = "hideMe";
-document.getElementById('question2').className = "showMe";
+         document.getElementById('mystyle').className = "hideMe";
+         document.getElementById('question2').className = "showMe";
+    if	(document.getElementById('check').checked) {
+        left = left + 1;
+    }
 	}
 	function submit2Function() {
-		if (document.getElementById('check2').checked) {
+        document.getElementById('question2').className = "hideMe";
+        if (document.getElementById('check2').checked) {
 			left = left + 1;
-			document.getElementById('question2').className = "hideMe"
+
 		}
 	}
-	
-}
+
 function finalsubmit(left_total, right_total)
 {
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
     }
-}
-var submit_url = "https://docs.google.com/forms/d/1ybRxxAgIwIOhx1y3QdeA8n1jcKuro6JzaZmcHIqrYyE/formResponse?entry.1797735792="+ left_total +"&entry.72936493="+right_total
-xmlhttp.open("GET",submit_url,false);
-xmlhttp.send();
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+        }
+    }
+    var submit_url = "https://docs.google.com/forms/d/1ybRxxAgIwIOhx1y3QdeA8n1jcKuro6JzaZmcHIqrYyE/formResponse?entry.1797735792="+ left_total +"&entry.72936493="+right_total
+    xmlhttp.open("GET",submit_url,false);
+    xmlhttp.send();
 }
 </script>
 
 
-</html>
+
+
+<!-- Most of this program was written by TheEpicBlueberryPuffin-->
 <!-- Credits
 TheEPICBlueberryPuffin
 ShadowMage
 BronzeBoys
 The Human Ocelot
-@hashtagbacon42-->
-<!--There are 92 lines of code
-<!--Unfortunatly due to recent avents, The Human Ocelot has left the group-->
+@HashtagBacon42
+-->
+</body>
+</html>
