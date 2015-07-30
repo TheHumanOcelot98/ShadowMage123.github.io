@@ -57,15 +57,24 @@ document.getElementById("mystyle").className = "hideMe";
 function myFunction() {
     document.getElementById("mystyle").className = "showMe";
     
-}
+}<div id="question2">
+<p>When looking at an app you want to buy do you look at the reviews?</p>
+<input type="radio" id ="check2" name="blah1" value="left">Yes<br>
+<input type="radio" id="check3" name="blah1" value="nothing">No
+<button onclick="submit2Function()">Submit</button>
+</div>
 var question_value;
 function submitFunction() {
      if	(document.getElementById('check').checked) {
      left = left + 1;
-     console.log("yay coding", left);
-
-	
-		
+document.getElementById('mystyle').className = "hideMe";
+document.getElementById('question2').className = "showMe";
+	}
+	function submit2Function() {
+		if (document.getElementById('check2').checked) {
+			left = left + 1;
+			document.getElementById('question2').className = "hideMe"
+		}
 	}
 	
 }
