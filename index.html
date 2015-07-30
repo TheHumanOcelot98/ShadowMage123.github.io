@@ -39,20 +39,44 @@ display:auto
 </head>
 <body>
 <div id ="mystyle">
-<p>Do you like Bacon Wraps?</p>
-<input type="radio" name="blah" value="y" checked>Yes
+
+<p>When learning a language, do you repeat after someone talking or try to remember it yourself?</p>
+<input type="radio" id="check" name="blah" value="left" checked>I repeat after speech
 <br>
-<input type="radio" name="blah" value="n">No
+<input type="radio" id="check1" name="blah" value="nothing">I try to remember it
+<button onclick="submitFunction()">Submit</button>
 </form> 
 </div>
 <button onclick="myFunction()">Take the Test!</button>
 <div id ="credits">Made By TheHumanOcelot, TheEpicBlueberryPuffin, Bronze Boys and ShadowMage</div>
 <script>
-
+var left=0;
+var right=0;
 document.getElementById("mystyle").className = "hideMe";
 
 function myFunction() {
     document.getElementById("mystyle").className = "showMe";
+    
+}<div id="question2">
+<p>When looking at an app you want to buy do you look at the reviews?</p>
+<input type="radio" id ="check2" name="blah1" value="left">Yes<br>
+<input type="radio" id="check3" name="blah1" value="nothing">No
+<button onclick="submit2Function()">Submit</button>
+</div>
+var question_value;
+function submitFunction() {
+     if	(document.getElementById('check').checked) {
+     left = left + 1;
+document.getElementById('mystyle').className = "hideMe";
+document.getElementById('question2').className = "showMe";
+	}
+	function submit2Function() {
+		if (document.getElementById('check2').checked) {
+			left = left + 1;
+			document.getElementById('question2').className = "hideMe"
+		}
+	}
+	
 }
 </script>
 
@@ -60,3 +84,10 @@ function myFunction() {
 </html>
 
 <!-- Most of this program was written by TheEpicBlueberryPuffin-->
+<!-- Credits
+TheEPICBlueberryPuffin
+ShadowMage
+BronzeBoys
+The Human Ocelot
+@HashtagBacon42
+-->
